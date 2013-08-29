@@ -9,3 +9,4 @@ dist/
 .pypirc
 *wip.py
 docs/_build
+mock_output

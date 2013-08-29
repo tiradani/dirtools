@@ -17,26 +17,26 @@ BuildRequires:  python2-devel
 
 Provides:       py_dirtools = %{version}-%{release}
 
-Source:         dirtools.tar.gz
+Source:         dirtools-%{version}.tar.gz
 
 
 %description
 Provides an rpm package for the globster project hosted at https://github.com/tsileo/globster
 
 %prep
-%setup -q -n dirtools
+%setup -q -n dirtools-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{python_sitelib}
 install -d $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../__init__.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../CHANGES.rst $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../dirtools.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../LICENSE $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../README.rst $RPM_BUILD_ROOT%{python_sitelib}/dirtools
-cp -r ../test_dirtools.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r __init__.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r CHANGES.rst $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r dirtools.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r LICENSE $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r README.rst $RPM_BUILD_ROOT%{python_sitelib}/dirtools
+cp -r test_dirtools.py $RPM_BUILD_ROOT%{python_sitelib}/dirtools
 
 %files
 %{python_sitelib}/dirtools/
