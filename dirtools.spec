@@ -4,7 +4,7 @@
 %endif
 
 
-Name:           py_dirtools
+Name:           dirtools
 Group:          System Environment/Libraries
 Version:        0
 Release:        1%{?dist}
@@ -15,7 +15,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python2-devel
 
-Provides:       py_dirtools = %{version}-%{release}
+Provides:       dirtools = %{version}-%{release}
 
 Source:         dirtools-%{version}.tar.gz
 
